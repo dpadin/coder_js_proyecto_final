@@ -46,13 +46,18 @@ while (!salir){                                                     //Algoritmo 
                 metros_cinta = Math.ceil(cantidad_placas * CINTA_POR_PLACA)
                 kilos_masilla = cantidad_placas * MASILLA_POR_PLACA
 
-                alert("Cantidad de placas necesarias: " + cantidad_placas)
-                alert("Soleras necesarias: " + cantidad_soleras)
-                alert("Montantes necesarias: " + cantidad_montantes)
-                alert("Tornillos T2 necesarios: " + cantidad_tornillos_t2)
-                alert("Tornillos T1 necesarios: " + cantidad_tornillos_t1)
-                alert("Metros de cinta necesaria: " + metros_cinta)
-                alert("Kilos de Masilla: " + kilos_masilla)
+
+
+                let mensaje= "Cantidad de placas necesarias: " + cantidad_placas + "\n"
+
+                mensaje = mensaje + "Soleras necesarias: " + cantidad_soleras + "\n"
+                mensaje = mensaje + "Montantes necesarias: " + cantidad_montantes + "\n"
+                mensaje = mensaje + "Tornillos T2 necesarios: " + cantidad_tornillos_t2  + "\n"
+                mensaje = mensaje + "Tornillos T1 necesarios: " + cantidad_tornillos_t1  + "\n"
+                mensaje = mensaje +  "Metros de cinta necesaria: " + metros_cinta   + "\n"
+                mensaje = mensaje +  "Kilos de Masilla: " + kilos_masilla + "\n"
+
+                alert (mensaje)
 
 
                 salir=confirm ("Desea Salir?")
