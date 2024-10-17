@@ -21,6 +21,27 @@
 // Arrays. -- se crea el array "pizas" para acumular los distintos tabiques
 // Métodos de búsqueda y filtrado sobre el Array.-- se usa for each y for on 
 
+//prentrega 3 - 17/10/2024
+
+//se agrega carga de  datos_guardados. 
+
+// Pagina nueva_cotizacion.html
+
+//localstorage para recordar el usuario. 
+// se agrega uso del DOM para entrada de datos
+//DOM para agregar lineas en una tabla.
+// se usan los elementos de bootstrap 
+// se usan librerias para alerts y tostaditas de mensajes.
+// se capturan eventos para agregar usuarios, tabiques y elementos a la tabla de 
+// materiales.
+//********IMPORTANTE**************
+// desde index.html se redirige a la pagina "nueva_cotizacion.html"
+// La presentacion de los calculos con DOM se terminara en la entrega final
+// Por favor ignorar los elementos de index.html y main.js por el momento.
+
+
+
+
 
 
 
@@ -65,43 +86,43 @@ const MASILLA_POR_PLACA = 0.5
 const LARGO_SOLERA = 2.6
 
 
-while (!salir){                                                     //Algoritmo con un ciclo
+// while (!salir){                                                     //Algoritmo con un ciclo
         
-    cantidad_tabiques = Number(prompt("Ingrese la cantidad de tabiques a cotizar"))
-    //Ingreso de datos del usuario
+//     cantidad_tabiques = Number(prompt("Ingrese la cantidad de tabiques a cotizar"))
+//     //Ingreso de datos del usuario
 
-    for (let j=1;j<=cantidad_tabiques;j++){            // recorre la cantidad de tabiques pedidos
-            nombre_tabique =prompt ("Ingrese un nombre descriptivo para el tabique #" + j) 
-            ancho = Number(prompt("Ingrese Ancho de la Pared  #: " + j + " (en metros)"))
-            alto = Number(prompt("Ingrese Alto de la Pared   #: " + j + "  (en metros)"))
+//     for (let j=1;j<=cantidad_tabiques;j++){            // recorre la cantidad de tabiques pedidos
+//             nombre_tabique =prompt ("Ingrese un nombre descriptivo para el tabique #" + j) 
+//             ancho = Number(prompt("Ingrese Ancho de la Pared  #: " + j + " (en metros)"))
+//             alto = Number(prompt("Ingrese Alto de la Pared   #: " + j + "  (en metros)"))
 
-    if  (nombre_tabique!= "" && ancho!=0 && alto!= 0 && !isNaN (ancho) && !isNaN(alto)  ){     // algoritmo con condicional
+//     if  (nombre_tabique!= "" && ancho!=0 && alto!= 0 && !isNaN (ancho) && !isNaN(alto)  ){     // algoritmo con condicional
         
                
-        // hace el calculo
-                cantidad_placas = calcula_placas(ancho,alto)
-                cantidad_soleras = calcula_soleras(ancho,alto)
-                cantidad_montantes = cantidad_placas * MONTANTE_POR_PLACA
-                cantidad_tornillos_t2 = cantidad_placas * T2_POR_PLACA
-                cantidad_tornillos_t1 = cantidad_placas * T1_POR_PLACA
-                metros_cinta = Math.ceil(cantidad_placas * CINTA_POR_PLACA)
-                kilos_masilla = cantidad_placas * MASILLA_POR_PLACA
-        // crea un objeto tabique nuevo
-                let t = new tabique(nombre_tabique, cantidad_placas,cantidad_soleras,cantidad_montantes, cantidad_tornillos_t1, cantidad_tornillos_t2, metros_cinta,kilos_masilla)
-                piezas.push(t)
+//         // hace el calculo
+//                 cantidad_placas = calcula_placas(ancho,alto)
+//                 cantidad_soleras = calcula_soleras(ancho,alto)
+//                 cantidad_montantes = cantidad_placas * MONTANTE_POR_PLACA
+//                 cantidad_tornillos_t2 = cantidad_placas * T2_POR_PLACA
+//                 cantidad_tornillos_t1 = cantidad_placas * T1_POR_PLACA
+//                 metros_cinta = Math.ceil(cantidad_placas * CINTA_POR_PLACA)
+//                 kilos_masilla = cantidad_placas * MASILLA_POR_PLACA
+//         // crea un objeto tabique nuevo
+//                 let t = new tabique(nombre_tabique, cantidad_placas,cantidad_soleras,cantidad_montantes, cantidad_tornillos_t1, cantidad_tornillos_t2, metros_cinta,kilos_masilla)
+//                 piezas.push(t)
 
-}else{
-    alert ("por favor ingrese datos validos!")
-}
-}
-console.log(mustra_piezas  (piezas)) //  muestra el array de objetos creados
+// }else{
+//     alert ("por favor ingrese datos validos!")
+// }
+// }
+// console.log(mustra_piezas  (piezas)) //  muestra el array de objetos creados
 
-salir = confirm ("resultados enviados a la consola....Desea salir?")
+// salir = confirm ("resultados enviados a la consola....Desea salir?")
 
-}
+// }
 
 
-console.log("Fin del programa")
+ 
 
 
 function calcula_placas (f_ancho,f_alto){

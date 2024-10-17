@@ -3,20 +3,34 @@ html {
 }
 
 body {
-    height: 100%;
+   height: 100%;
 }
 
 html, body {
     background-color: rgb(29, 29, 29);
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    align-items: center;
+    justify-content: top;
+
 }
 
 h1 {
-    font-size: 5rem;
+    font-size: x-large;
     color: yellow;
     text-align: center;
+    height: auto;
+}
+h2 {
+    font-size: large;
+    color: green;
+    text-align: center;
+}
+
+h3 {
+    font-size: medium;
+    color: black;
+    text-align: center
 }
 
 p {
@@ -26,8 +40,29 @@ p {
     animation: algo 3s ease-in-out 2s infinite;
 }
 
+a{
+        text-align: center;
+        font-size:medium;
+        color:green;
+        border-style: solid;
+        background-color: white;
+
+}
+
+/*
 @keyframes algo {
     from {color:rgb(29, 29, 29)}
     50% {color: rgb(203, 218, 32);}
     to {color:rgb(29, 29, 29)}
+}
+*/
+ 
+.form_container{
+    background-color: black;
+    color: white;
+    border-style: solid;
+    border-color: white;
+    text-align: left;
+    width: 50%;
+    
 }

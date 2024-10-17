@@ -1,0 +1,84 @@
+
+
+
+body{
+    text-align: center;
+    background-color:aqua;
+    color: white;
+    align-items: center;
+    height:100%;
+
+}
+.form_datos_contacto{
+    border-style: solid;
+    border-width: 1px;
+    border-color: blue;
+
+}
+ 
+.form-cliente{
+    display: flex;
+    justify-content: center;
+
+}
+.carga_cotizacion{
+    text-align: center;;
+     padding: 5px;
+    display: flex;
+    justify-content: center;
+}
+.visible{
+    visibility:visible;
+}
+.invisible{
+    visibility:hidden;
+}
+.btn_cotizar{
+text-align: center;
+
+}
+.div_cotizar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+        
+    }
+.carga_tabiques{
+
+   padding: 5px;
+   margin:auto;
+    width: 80%;
+    /*display: flex;
+    justify-content: center;*/
+}
+.columna{
+
+    text-align: center;
+
+}
+
+
+header{
+    background-color: black    ;
+    color: white;
+
+}
+
+h1{
+    text-align: center;
+    color: green;
+    font-size: small;
+}
+h2{
+    text-align: center;
+    color: green;
+    font-size: x-small;
+
+}
+h3 {
+    font-size: medium;
+    color: black;
+    text-align: center
+    
+}
+  
