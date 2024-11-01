@@ -1,0 +1,39 @@
+html {
+    height: 100vh;
+}
+
+body {
+    height: 100%;
+}
+
+
+h1,
+h2 {
+    text-align: center;
+
+}
+
+h3 {
+    font-size: x-small;
+}
+
+
+.hero {
+    background-color: rgb(239, 230, 230);
+    color: black;
+    width: 80%;
+    margin: 50px;
+}
+
+p {
+    text-align: center;
+
+}
+
+.cotizacion_dolar {
+    background-color: beige;
+    color: black;
+    display: flex;
+    justify-content: center;
+
+}

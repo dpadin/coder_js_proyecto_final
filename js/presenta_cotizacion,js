@@ -1,0 +1,51 @@
+
+//crea objeto en base a lo guardado en localstorage
+let cotizacion = JSON.parse(localStorage.getItem("cotizacion"))
+
+let linea_tabique = document.getElementsByClassName("linea_tabique")[0]
+let linea_materiales = document.getElementsByClassName("linea_materiales")[0]
+// carga datos del usuario
+let Usuarios_Guardados = JSON.parse(localStorage.getItem("usuarios"))
+//carga las etiquetas de usaurio
+let Datos_Usuario = document.getElementsByClassName("datos_usuario")
+
+let Fecha = new Date()
+
+Datos_Usuario[0].innerText = Fecha.toLocaleDateString()
+Datos_Usuario[1].innerText = Usuarios_Guardados.nombre
+Datos_Usuario[2].innerText = Usuarios_Guardados.apellido
+
+
+
+cotizacion.forEach(tabique => {
+    // probamos clonar la tabla
+    let clon = document.querySelector("template").content.cloneNode(true)
+    //Agrega los datos de cada tabique
+    clon.querySelectorAll("th")[0].innerText = tabique.nombre
+    clon.querySelectorAll("th")[1].innerText = tabique.ancho
+    clon.querySelectorAll("th")[2].innerText = tabique.alto
+    //agrega los datos de los materiales
+    clon.querySelectorAll("th")[5].innerText = "Plascas Yeso"
+    clon.querySelectorAll("th")[6].innerText = tabique.cantidad_placas
+
+    clon.querySelectorAll("th")[7].innerText = "Soleras"
+    clon.querySelectorAll("th")[8].innerText = tabique.cantidad_soleras
+
+    clon.querySelectorAll("th")[9].innerText = "Montantes"
+    clon.querySelectorAll("th")[10].innerText = tabique.cantidad_montantes
+
+    clon.querySelectorAll("th")[11].innerText = "Tornillos T1"
+    clon.querySelectorAll("th")[12].innerText = tabique.cantidad_tornillos_t1
+
+    clon.querySelectorAll("th")[13].innerText = "Tornillos T2"
+    clon.querySelectorAll("th")[14].innerText = tabique.cantidad_tornillos_t2
+
+    clon.querySelectorAll("th")[15].innerText = "Cinta (mts)"
+    clon.querySelectorAll("th")[16].innerText = tabique.metros_cinta
+
+    clon.querySelectorAll("th")[17].innerText = "Masilla (Kg.)"
+    clon.querySelectorAll("th")[18].innerText = tabique.kilos_masilla
+
+    linea_tabique.appendChild(clon)
+
+}); 

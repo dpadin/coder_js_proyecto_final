@@ -1,0 +1,10 @@
+.datos_cliente {
+    display: flex;
+    justify-content: center;
+    align-items: top;
+}
+
+.contenedor_datos_clietne {
+    width: 50%;
+
+}
